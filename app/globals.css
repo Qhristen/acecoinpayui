@@ -17,11 +17,313 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: url("/assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.main-wrapper {
+  position: relative;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 6em;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  padding: 1em;
+  padding-top: 5em;
+  margin-top: 6em;
+  margin-bottom: 6em;
+  box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.1);
+}
+
+.main-wrapper .close-btn {
+  position: absolute;
+  z-index: 99;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 70%;
+  padding: 1em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: initial;
+  padding: 1em;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.header .logo-circle {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 3em;
+  background-color: #035fff;
+  border-radius: 50%;
+}
+/* .header .logo-circle svg {
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+} */
+
+.header .logo h1 {
+  font-size: 1.75em;
+  font-weight: 600;
+  margin-left: 0.6em;
+  color: #05365c;
+}
+.header .logo h1 .lean {
+  font-weight: 300;
+}
+
+.header .timer {
+  font-size: 1.35em;
+  font-weight: 500;
+}
+.header .timer-box {
+  background-color: #17254c;
+  color: #fff;
+  height: 1.9em;
+  width: 1.3em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-left: 2px;
+}
+.header .timer-divider {
+  padding: 0.1em;
+}
+
+form {
+  padding: 1em;
+}
+form .input-group {
+  margin-bottom: 1.5em;
+}
+form .input-group .label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-bottom: 1.8em;
+}
+
+form .input-group .label .description .title {
+  text-transform: capitalize;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #05365c;
+  margin-bottom: 0.4em;
+}
+form .input-group .label .description .desc {
+  font-size: 0.77em;
+  font-weight: 500;
+  color: #8e96a3;
+}
+form .input-group .label button.edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  color: #1da1f2;
+}
+form .input-group .label button.edit svg {
+  height: 0.9em;
+  fill: #1da1f2;
+}
+form .input-group .label button.edit .btn-desc {
+  display: block;
+  margin-left: 0.6em;
+  font-weight: 500;
+}
+form .input-group .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(224, 224, 224, 0.5);
+  background: linear-gradient(45deg, #f5f8ff, transparent);
+  border-radius: 6px;
+}
+
+form .input-group .main img.leading-icon {
+  left: 0;
+  height: 2em;
+  top: 50%;
+  left: 1.2em;
+}
+form .input-group .main img.trailing-icon {
+  right: 0;
+  height: 1.5em;
+  top: 50%;
+  right: 1.5em;
+}
+form .input-group .main input {
+  width: 100%;
+  padding: 1em 0em 1em 0em;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #05365c;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+}
+form .input-group .main input:focus {
+  outline-color: transparent;
+  background-color: transparent;
+}
+form .input-group .main input::placeholder {
+  font-weight: 400;
+  opacity: 0.5;
+}
+form .input-group.__col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+form .input-group.__col .grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  width: 400px;
+  position: relative;
+}
+form .input-group.__col .grp .divider {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #05365c;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+form .input-group.__col .main {
+  margin-top: 0;
+  width: 400px;
+}
+form .input-group.__col .main input {
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+  background: none;
+}
+form .input-group.__col .main input:focus {
+  background: rgba(0, 119, 182, 0.05);
+}
+form .input-group.__col .main input[type="password"] {
+  text-align: left;
+  padding-left: 1.5em;
+  letter-spacing: 0.3em;
+  background: transparent;
+}
+form .input-group.__col .main .trailing-icon {
+  opacity: 0.35;
+}
+form .input-group.__col .main.__date {
+  width: 42%;
+}
+form .btn-submit {
+  background-color: #035fff;
+  width: 100%;
+  padding: 1.2em 0;
+  margin-top: 0.75em;
+  box-sizing: border-box;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  font-weight: 500;
+  border-radius: 0.6em;
+  transition: all 250ms ease-in-out;
+}
+form .btn-submit:hover {
+  background-color: #1254d6;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.checkout-details {
+  width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  body{
+    background: none;
+  }
+  .main-wrapper {
+    display: unset;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .checkout-details {
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  form .input-group.__col {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+}
+form .input-group.__col .main {
+  width: 100%;
+}
+
+form .input-group.__col .main.__date {
+  width: 50%;
+}
+form .input-group.__col .grp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+form .input-group.__col .grp .divider {
+  position: unset;
+  transform: none;
+  padding: 0.5em;
+}
+}
+
+@media screen and (max-width: 1200px) {
+  .main-wrapper {
+    display: block;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .checkout-details {
+    width: 100%;
+  }
 }
